@@ -1,0 +1,229 @@
+*,*:before,*:after{box-sizing:border-box;}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: antiquewhite;
+}
+
+header {
+
+    padding: 10px 20px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    border-bottom: 1px black solid;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.hero {
+    position: relative;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+.portfolio {
+    padding: 20px;
+    align-items: center;
+
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 15px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+.contact-us {
+    padding: 20px;
+
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+form {
+    width: 50%;
+    border-right: 2px midnightblue solid;
+    border-bottom: 2px midnightblue solid;
+    border-left: 2px midnightblue solid;
+    border-top: 2px midnightblue solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input, form select, form button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: midnightblue;
+    color: white;
+    font-size: 10px;
+
+}
+@media (max-width: 1024px) {
+    .header-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-bottom {
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .header-top span {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero-text {
+        padding: 15px;
+    }
+
+    .portfolio {
+        padding: 30px 20px;
+    }
+
+    .portfolio-item img {
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .contact-us {
+        padding: 30px 20px;
+    }
+
+    form input, form select, form button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
